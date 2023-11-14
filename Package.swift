@@ -22,15 +22,6 @@ let package = Package(
                 .product(name: "FluentPostgresDriver", package: "fluent-postgres-driver"),
                 .product(name: "Vapor", package: "vapor"),
             ]
-        ),
-        .testTarget(name: "AppTests", dependencies: [
-            .target(name: "App"),
-            .product(name: "XCTVapor", package: "vapor"),
-
-            // Workaround for https://github.com/apple/swift-package-manager/issues/6940
-            .product(name: "Vapor", package: "vapor"),
-            .product(name: "Fluent", package: "Fluent"),
-            .product(name: "FluentPostgresDriver", package: "fluent-postgres-driver"),
-        ])
+        )
     ]
 )

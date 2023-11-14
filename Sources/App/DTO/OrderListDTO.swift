@@ -8,5 +8,5 @@
 import Vapor
 
 struct OrderListDTO: Content {
-    var order: [OrderDTO]
+    var orders: [OrderDTO]
 }
