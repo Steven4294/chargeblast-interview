@@ -9,7 +9,7 @@ import Vapor
 
 struct OrderDTO: Content {
     let id: UUID?
-    let price: Float
+    let price: Double
     let currency: String
     let product: String
     let customer_email: String

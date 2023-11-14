@@ -10,7 +10,7 @@ public func configure(_ app: Application) async throws {
     
     app.databases.use(
         try .postgres(
-            url: "postgresql://bsalves:GBLgRvkUH63Z@ep-black-boat-19772974-pooler.us-east-2.aws.neon.tech/chargeblast?sslmode=require"
+            url: "postgresql://bsalves:GBLgRvkUH63Z@ep-black-boat-19772974-pooler.us-east-2.aws.neon.tech/test?sslmode=require"
         ),
         as: .psql
     )

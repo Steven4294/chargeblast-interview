@@ -13,7 +13,7 @@ final class Order: Model, Content {
     static let schema = "sell_order"
     
     @ID(key: .id) var id: UUID?
-    @Field(key: "price") var price: Float
+    @Field(key: "price") var price: Double
     @Field(key: "currency") var currency: String
     @Parent(key: "product_id") var product: Product
     @Parent(key: "customer_id") var customer: Customer
@@ -22,7 +22,7 @@ final class Order: Model, Content {
     
     init(
         id: UUID = UUID(),
-        price: Float,
+        price: Double,
         currency: String,
         product_id: Product.IDValue,
         customer_id: Customer.IDValue
