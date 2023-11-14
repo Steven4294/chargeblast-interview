@@ -21,7 +21,7 @@ struct ProductController: RouteCollection {
 
     func create(req: Request) async throws -> ProductDTO {
         let content = try req.content.decode(ProductDTO.self)
-        let product = try await Product(
+        try await Product(
             id: UUID(),
             name: content.name
         ).create(on: req.db)
