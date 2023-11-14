@@ -10,7 +10,7 @@ struct OrderController: RouteCollection {
 
     func orders(req: Request) async throws -> OrderListDTO {
         OrderListDTO(
-            order: try await Order
+            orders: try await Order
                 .query(on: req.db)
                 .with(\.$customer)
                 .with(\.$product)
@@ -50,7 +50,7 @@ struct OrderController: RouteCollection {
             throw Abort(.custom(code: 404, reasonPhrase: "Product not found."))
         }
         return OrderListDTO(
-            order: try await Order
+            orders: try await Order
                 .query(on: req.db)
                 .with(\.$customer)
                 .with(\.$product)
